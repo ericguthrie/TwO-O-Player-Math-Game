@@ -1,3 +1,6 @@
-require './game_class.rb';
-require './players_class.rb';
-require './questions_class.rb';
+require './game';
+
+game = Game.new
+game.turn
+
+
