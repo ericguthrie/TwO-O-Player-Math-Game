@@ -17,10 +17,22 @@ class Game
  
       @current_player.lose_a_life  unless success
 
+      puts "P1: #{@player1.lives}/3  P2: #{@player2.lives}/3"
+
       if @current_player.lives == 0
-        game_over
+        num = 1
+      else
+        num = 0
       end
-  end
+
+      if @current_player.name == @player1.name 
+        @current_player = @player2
+      else 
+        @current_player = @player1
+        end
+
+        return num
+      end
 
   def game_over
     puts "GAME OVER"
